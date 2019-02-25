@@ -82,5 +82,5 @@ def classify_images(images_dir, results_dic, model):
       else:
         results_dic[key].extend((model_label, 0))
 
-      
+      #uploaded to udacity
 

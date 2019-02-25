@@ -71,18 +71,20 @@ def adjust_results4_isadog(results_dic, dogfile):
 
     with open(dogfile, 'r' ) as infile:
       line = infile.read()
-
+      #problem area, I need to split up the dognames.txt by /n
       while line != "":
 
-        line = line.rstrip('/n')
+        line_list = line.split('\n')
 
-        if line not in dognames_dic:
+        for item in line_list:
+            
+          if item not in dognames_dic:
 
-          dognames_dic[line] = 1
+            dognames_dic[item] = 1
 
-        else:
+          else:
 
-          print ("Warning: this name already exists in dognames_dic.")
+            print ("Warning: this name already exists in dognames_dic.")
 
         line = infile.read()
 
@@ -105,3 +107,5 @@ def adjust_results4_isadog(results_dic, dogfile):
         #neither of the labels are correct for is-a-dog
         else:
           results_dic[key].extend((0, 0))
+
+          #uploaded to udacity

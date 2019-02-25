@@ -62,5 +62,16 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
-    None
+    print (model)
+
+    print("Total number of images: " + str(results_stats_dic['n_images']))
+    print("Total number of dog images: " + str(results_stats_dic['n_dogs_img']))
+    print ("Total number of not dog images: " + str(results_stats_dic['n_notdogs_img']))
+
+    for key in results_stats_dic:
+        
+        if key[0] == 'p':
                 
+                print(key + ": " + str(results_stats_dic[key]))
+
+                #uploaded to udacity
