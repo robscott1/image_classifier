@@ -3,8 +3,8 @@
 # */AIPND-revision/intropyproject-classify-pet-images/get_pet_labels_hints.py
 #                                                                             
 # PROGRAMMER: Rob Scott
-# DATE CREATED:                                  
-# REVISED DATE: 
+# DATE CREATED:    2/25/19                              
+# REVISED DATE: 2/25/19
 # PURPOSE: This is a *hints* file to help guide students in creating the 
 #          function get_pet_labels that creates the pet labels from the image's
 #          filename. This function inputs: 
@@ -67,8 +67,8 @@ def get_pet_labels(image_dir):
             #          accessed by in_files[idx]. Be certain to place the 
             #          extracted dog breed name in the variable pet_label 
             #          that's created as an empty string ABOVE
-
-            image_name = in_files[idx].split('_')
+            image_name = in_files[idx].strip('.jpg')
+            image_name = image_name.split('_')
 
             for word in image_name:
 

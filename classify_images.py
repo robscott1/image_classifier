@@ -3,8 +3,8 @@
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
 # PROGRAMMER: Rob Scott
-# DATE CREATED:                                 
-# REVISED DATE: 
+# DATE CREATED: 2/25/19                                
+# REVISED DATE: 2/25/19
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
 #          labels to the pet image labels. This function inputs:
@@ -83,4 +83,3 @@ def classify_images(images_dir, results_dic, model):
         results_dic[key].extend((model_label, 0))
 
       #uploaded to udacity
-
